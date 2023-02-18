@@ -1,0 +1,242 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  #pageTitle {
+    color: rgb(49, 70, 110);
+    text-align: center;
+  }
+  
+  body {
+    background: aliceblue;
+  }
+  
+  #mainTitle {
+    color: #444;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  
+  .title {
+    font-size: 15px;
+    color: #444;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  
+  .content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 5px;
+  }
+  
+  .content .mainVideo,
+  canvas {
+    border: 2px solid rgb(49, 70, 110);
+    border-radius: 5px;
+    padding: 10px;
+    background: #fff;
+  }
+  
+  .content .mainVideo video {
+    width: 100%;
+    border-radius: 5px;
+    height: 400px;
+  }
+  
+  .content .listVideo {
+    border: 2px solid rgb(49, 70, 110);
+    border-radius: 5px;
+    padding: 10px;
+    background: #fff;
+    height: 434px;
+    overflow-y: scroll;
+  }
+  
+  .content .listVideo::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .content .listVideo::-webkit-scrollbar-track {
+    background: rgb(214, 212, 212);
+    border-radius: 50px;
+  }
+  
+  .content .listVideo::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background: gray;
+  }
+  
+  .content .listVideo video {
+    width: 100px;
+    border-radius: 5px;
+  }
+  
+  .video {
+    display: flexbox;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    margin: 10px;
+    background: rgb(250, 249, 249);
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .video:hover {
+    background: rgb(211, 209, 209);
+  }
+  
+  .content .video.active {
+    background: rgb(68, 97, 121);
+  }
+  
+  .content .video.active .title {
+    color: #fff;
+  }
+  
+  .controls {
+    position: absolute;
+    display: flex;
+    top: 420px;
+    left: 5%;
+    width: 55%;
+    opacity: 0.3;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 1s all;
+  }
+  
+  .controls:hover,
+  .controls:focus {
+    opacity: 1;
+    color: #fff;
+  }
+  
+  span {
+    display: flex;
+    align-self: center;
+    font-size: 12px;
+  }
+  
+  .playBtn {
+    width: 30px;
+    margin-left: 5%;
+  }
+  
+  .volume {
+    -webkit-appearance: none;
+    background: transparent;
+    margin-left: 10px;
+    margin-right: 5%;
+    width: 100px;
+    padding: 0;
+  }
+  
+  .volume::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    background: white;
+  }
+  
+  .volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 10px;
+    width: 7px;
+    background: black;
+    cursor: pointer;
+  }
+  
+  #progress {
+    position: absolute;
+    display: flex;
+    bottom: 10px;
+    background-color: rgb(49, 70, 110);
+    width: 100%;
+    height: 5px;
+    margin-bottom: 1.1rem;
+    cursor: pointer;
+  }
+  
+  #progressBar {
+    background-color: rgb(190, 185, 185);
+    height: 5px;
+    cursor: pointer;
+  }
+  
+  .muteBtn {
+    margin-left: 40%;
+  }
+  
+  .addVideo {
+    position: relative;
+    display: flexbox;
+    left: 95%;
+    top: 15px;
+    width: 550px;
+  }
+  
+  .deleteVideo {
+    position: relative;
+    display: flexbox;
+    left: 7%;
+    top: 45px;
+    width: 250px;
+  }
+  
+  .reorderListBtn {
+    position: relative;
+    top: 25px;
+    left: 130%;
+    width: 100px;
+  }
+  
+  .inputOrder {
+    position: relative;
+    top: 35px;
+    width: 250px;
+    left: 7%;
+  }
+  .uploadLabel {
+    font-weight: bold;
+    color: rgb(49, 70, 110);
+  }
+  
+  #newVideo,
+  .deleteVideo,
+  .reorderListBtn,
+  .inputOrder {
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-image: linear-gradient(
+      50deg,
+      rgb(163, 163, 199),
+      rgb(49, 70, 110)
+    );
+  }
+  
+  canvas {
+    position: relative;
+    top: 2px;
+    left: 0px;
+    width: 63%;
+    height: 400px;
+  }
+  
+  .canvasEffects {
+    position: relative;
+    display: flex;
+    width: 80px;
+  }
+  
